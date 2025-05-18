@@ -33,13 +33,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
+    /* Verás qué elemento se desborda */
+    /* outline: 1px solid red;  */
 
 }
 
 body{
-
+    
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /*          HEADER           */
@@ -157,9 +160,6 @@ body{
 /*          SECTION MIGRATION WEB */
 
 
-
-
-/* seccion general */
 .section{
 
     background-color: var(--color-primario-700);
@@ -312,10 +312,14 @@ body{
     width: 100%;
     height: 100%;
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 36px 0px 96px;
+    max-width: 1472px;
+    /*auto : Calcula automáticamente cuánto espacio debe haber a la izquierda y a la derecha para centrar horizontalmente el elemento dentro de su contenedor (body). */
+    margin: 0 auto;
+    padding: 36px 40px 96px 40px;
 
 }
 
