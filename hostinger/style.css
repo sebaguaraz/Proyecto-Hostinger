@@ -1,9 +1,4 @@
 /* importamos los iconos*/
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 /* importo fuente */
@@ -18,8 +13,6 @@
     --color-primario-500: #4119bba6;
     --color-primario-600:#2f1c6a;
     --color-primario-700:#1f1346;
-
-
     /* variable de estilo de fuente */
     --fuente-principal: 'DM Sans', sans-serif;
     
@@ -28,21 +21,22 @@
 
 /* aplico a todos los elementos */
 *{
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
     /* Verás qué elemento se desborda */
     /* outline: 1px solid red;  */
+    text-decoration: none;
+
+    
 
 }
 
 body{
-    
-    width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
+    /* color: var(--color-primario-600); */
+
 }
 
 /*          HEADER           */
@@ -53,7 +47,7 @@ body{
     /* justify-content: start; */
     align-items: center;
     height: 88px;
-    width: 100%;
+    width: 100vw;
     /* se le pone sticky para que siga respetando su espacio original y top 0 al respecto de la parte delantera del viewport */
     position: sticky;
     top: 0;
@@ -63,35 +57,37 @@ body{
 }
 
 .header .header__icon{
-
         padding: 29px 0 29px 40px;
-
 }
 
-.header .header_content{
+.icon_hostinger{
 
+    width: 147px;
+    height: 30px;   
+}
+
+
+.header .header__content{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px 40px;
-
 }
 
-.header_content-left .nav-list{
+.header__content-left .nav-list{
     
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 32px;
     list-style: none;
-    
+    color: black;
 }
 
 
 .nav-list button{
-    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -99,14 +95,13 @@ body{
     border: none;
     background-color: transparent;
     gap: 5px;
-    font-size: 16px;
-    
+    font-size: 16px; 
 }
 
 .modified-link{
     display: flex;
     font-size: 16px;
-    text-decoration: none;
+    
     color: black;
     
 }
@@ -114,7 +109,7 @@ body{
 
 
 
-.header_content .header_content-right{
+.header__content .header__content-right{
 
     display: flex;
     flex-direction: row;
@@ -124,7 +119,7 @@ body{
     gap: 32px;
 }
 
-.header_content-right .buttom-icon-span{
+.header__content-right .buttom-icon-span{
 
     display: flex;
     justify-content: center;
@@ -147,7 +142,7 @@ body{
     height: 100%;
 }
 
-.header_content-right .buttom-login{
+.header__content-right .buttom-login{
 
     border-radius: 12px;
     border: 3px solid black;
@@ -161,14 +156,13 @@ body{
 
 
 .section{
-
     background-color: var(--color-primario-700);
     display: flex;
     flex-direction: row;
     justify-content: center;
     /* la section ocupa el ancho ttoal del navegador */
     /* se agrega */
-    width: 100%;
+    width: 100vw;
 }
 
 /* contenedor general */
@@ -180,9 +174,9 @@ body{
     align-items: center;
     justify-content: center;
     /* width: 1128px; */
-    width: 80%;
-     /*para que sea un ancho fijo el contenedor general*/
-    /* el 20% que sobra es del padre que no va ocupar (del padre section) */
+    max-width: 1208px;
+    /* que ocupe todo el ancho cuando se achica la ventana*/
+    width: 100%; 
     }
 
 
@@ -222,7 +216,7 @@ body{
 }
 
 /* contenedor del boton */
-.section_content_buttom{
+.section__content__buttom{
 
     border: 2px solid var(--color-primario-400);
     border-radius: 8px;
@@ -239,7 +233,7 @@ body{
     color: var(--color-primario-300);
     font-weight: 700;
     /* le saca el subrayado */
-    text-decoration: none;
+    
 
 
 }
@@ -247,7 +241,7 @@ body{
 
 
 /* contenedor de las tarjetas */
-.section_content_body{
+.section__content__body{
 
     display: flex;
     flex-direction: row;
@@ -255,13 +249,13 @@ body{
     gap: 24px;
     padding: 0px 40px;
 
-    /* se agrega para ocupar el ancho del contenedor padre = section_content*/
+    /* se agrega para ocupar el ancho del contenedor padre = section__content*/
     width: 100%;
 }
 
 
 /* contenedor  de titulo y parrafo */
-.section_content_header{
+.section__content__header{
 
     margin:0px 0px 48px;
     padding: 0px 40px;
@@ -307,9 +301,9 @@ body{
 /*              SECTION HEROOO      */
 
 
-.section_hero{
+.section__hero{
 
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     /* flex-wrap: wrap; */
@@ -323,26 +317,26 @@ body{
 
 }
 
-.content_hero_left{
+.content__hero__left{
 
     display: flex;
     flex-direction: column;
-    width: 463px;
-    height: 442px;
+    max-width: 463px;
+    /* height: 442px; */
     align-items: start;
     justify-content: center;
     
 
 }
 
-h1{
+.title-principel-hero{
 
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primario-600);
 }
 
-.content_hero_left-parragraph{
+.content__hero__left-parragraph{
 
     margin-top: 8px;
     margin-bottom: 34px;
@@ -358,14 +352,14 @@ h1{
 
 }
 
-.content_hero_left-parragraph .text-color{
+.content__hero__left-parragraph .text-color{
 
     color: var(--color-primario-400);
     font-size: 20px;
     font-weight: 700;
 }
 
-.content_hero_left-list li{
+.content__hero__left-list li{
 
     list-style: none;
     color: var(--color-primario-700);
@@ -376,20 +370,20 @@ h1{
     gap: 10px;
 }
 
-.content_hero_left-list .check{
+.content__hero__left-list .check{
     color: green;
     width: 20px;
     height: 20px;
 }
 
 
-.content_hero_left-list .question-circle{
+.content__hero__left-list .question-circle{
 
     width: 16px;
     height: 16px;
 }
 
-.content_hero_left-span{
+.content__hero__left-span{
     margin-top: 24px;
     display: flex;
     flex-direction: column;
@@ -401,7 +395,7 @@ h1{
 
 }
 
-.content_hero_left-span .span-style-big{
+.content__hero__left-span .span-style-big{
 
     font-size: 48px;
     font-weight: 700;
@@ -409,7 +403,7 @@ h1{
 }
 
 
-.content_hero_left-feature-bottons{
+.content__hero__left-feature-bottons{
 
     display: flex;
     flex-direction: row;
@@ -418,33 +412,33 @@ h1{
     margin-bottom: 12px;
 }
 
-.content_hero_left-feature-bottons a{
+.content__hero__left-feature-bottons a{
     height: 48px;
     padding: 12px 48px;
     background-color: var(--color-primario-400);
     border-radius: 15px;
     border: 2px solid var(--color-primario-400);
     color: var(--color-primario-300);
-    text-decoration: none;
+    
     font-size: 16px;
     font-weight: 700;
     text-align: center;
 }
 
-.content_hero_left-feature-bottons div{
+.content__hero__left-feature-bottons div{
     height: 48px;
     width: 160px;
     padding: 12px 18px;
     background-color: #e2dbfc;
     border-radius: 15px;
     color: var(--color-primario-700);
-    text-decoration: none;
+    
     font-size: 16px;
     font-weight: 600;
     text-align: center;
 }
 
-.content_hero_left-span-footer{
+.content__hero__left-span-footer{
 
     font-size: 16px;
     color: var(--color-primario-700);
@@ -456,21 +450,130 @@ h1{
 }
 
 
-.content_hero_right{
+.content__hero__right{
 
-    width: 880px;
-    height: 576px;
+    max-width: 880px;
 
 }
 
-.content_hero_right img{
+.content__hero__right img{
 
     width: 100%;
 }
 
 
+/*          footer              */
+
+.section__footer{
+    padding-top: 56px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content__footer{
+    width: 100%;
+    max-width: 1208px;
+    margin: 0px auto;
+    padding: 0px 40px;
+    
+    
+}
+
+.content__footer__left{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+
+}
+
+.content__footer__left .list-iconos{
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    
+}
+
+.iconos-redes{
+    
+    width: 32px;
+    height: 32px;
+    color: var(--color-primario-600);
+    
+}
+
+.content__footer__middle{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 100%;
 
 
+}
 
+.content__footer__middle .list-images-bank{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.list-images-bank a{
+
+    color: var(--color-primario-400);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.iconos-publicidades{
+    
+    height: 40px;
+    width: 60px;
+    border: 1px solid rgba(68, 59, 59, 0.226);
+    border-radius: 4px;
+}
+
+.content__footer__middle .list-legal{
+
+    display: flex;
+    gap: 16px;
+    color: var(--color-primario-600);
+
+}
+
+.list-legal a{
+    /* text-decoration: none; */
+    color: var(--color-primario-700);
+    font-size: 14px;
+}
+
+
+.content__footer__right{
+
+    max-width: 1128px;
+    border-top: 1px solid rgba(0, 0, 255, 0.137);
+    padding: 24px 0px;
+    color: var(--color-primario-700);
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 128px;
+    
+}
 
 
